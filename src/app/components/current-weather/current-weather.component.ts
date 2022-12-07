@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-current-weather',
-  templateUrl: './current-weather.component.html',
+  template: './current-weather.component.html',
   styleUrls: ['./current-weather.component.scss'],
 })
 export class AppCurrentWeatherComponent {
+  @Input() currentWeather: string;
+
   constructor() {}
 }

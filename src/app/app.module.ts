@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { AppHomeComponent } from './components/home/home.component';
 import { AppForecastComponent } from './components/forecast/forecast.component';
 import { AppCurrentWeatherComponent } from './components/current-weather/current-weather.component';
-
+import { AppWeatherService } from './services/weather/weather.service';
+import { AppWeatherApiService } from './services/api/weather-api.service';
 const routes: Routes = [
   {
     path: '**',
@@ -43,6 +44,7 @@ const routes: Routes = [
     AppForecastComponent,
     AppCurrentWeatherComponent,
   ],
+  providers: [AppWeatherService, AppWeatherApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AppWeatherService } from '../../services/weather/weather.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class AppHomeComponent {
-  constructor() {}
+  private currentLocation = 'Philidelphia';
+
+  public currentWeather$: Observable<string> =
+    this.weatherService.getCurrentWeather(this.currentLocation);
+
+  constructor(private weatherService: AppWeatherService) {}
 }

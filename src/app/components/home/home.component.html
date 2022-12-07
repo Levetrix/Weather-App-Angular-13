@@ -1,4 +1,7 @@
 <h1>Hello Bob</h1>
 <h3>Your weather for today:</h3>
-
+<app-current-weather
+  [currentWeather]="currentWeather$ | async"
+></app-current-weather>
+<app-forecast></app-forecast>
 <input type="text" placeholder="search location" />
