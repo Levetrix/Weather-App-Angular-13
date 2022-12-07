@@ -6,7 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatRadioModule } from '@angular/material/radio';
 // Material - END
 import { AppComponent } from './app.component';
-import { AppHomeComponent } from './home/home.component';
+import { AppHomeComponent } from './components/home/home.component';
+import { AppForecastComponent } from './components/forecast/forecast.component';
+import { AppCurrentWeatherComponent } from './components/current-weather/current-weather.component';
 
 const routes: Routes = [
   {
@@ -35,7 +37,12 @@ const routes: Routes = [
     RouterModule,
     RouterModule.forRoot(routes),
   ],
-  declarations: [AppComponent, AppHomeComponent],
+  declarations: [
+    AppComponent,
+    AppHomeComponent,
+    AppForecastComponent,
+    AppCurrentWeatherComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
